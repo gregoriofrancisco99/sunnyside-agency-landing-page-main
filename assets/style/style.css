@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#banner {
+  background: url("./../images/icon-arrow-down.svg") no-repeat,
+    url("./../images/desktop/image-header.jpg") no-repeat;
+  background-position: center 52%, center center;
+  background-size: 2.4%, cover;
+  background-attachment: fixed, scroll;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+
+  color: hsl(0, 0%, 100%);
+}
+header .topDiv {
+  width: 100%;
+  padding: 2em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.logo img {
+  width: 160px;
+}
+
+.rightSideHeader {
+  width: 35%;
+}
+.rightSideHeader .menuBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  font-family: "sans-serif";
+  font-weight: 700;
+}
+header .menuBar a {
+  color: hsl(0, 0%, 100%);
+}
+header .menuBar .contact.btn {
+  background: hsl(0, 0%, 100%);
+  padding: 1.2em 1.8em;
+  font-family: "serif";
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5em;
+  color: #000;
+}
+
+.bottomDiv {
+  margin-top: 5em;
+}
+.bottomDiv h1 {
+  position: relative;
+
+  font-size: 47px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main #whyUs #transformYourBrand {
+  grid-area: transformYourBrand;
+}
+main #whyUs #standToTheRight {
+  grid-area: standToTheRight;
+}
+main #whyUs #graphicDesign {
+  grid-area: graphicDesign;
+}
+main #whyUs #photography {
+  grid-area: photography;
+  color: hsl(198, 62%, 26%);
+}
+main section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+
+  grid-template-areas:
+    "transformYourBrand transformYourBrand"
+    "standToTheRight standToTheRight"
+    "graphicDesign photography";
+
+  /*align-items: center;
+  justify-content: center;
+  flex-direction: row;*/
+}
+
+main #whyUs #transformYourBrand,
+main #whyUs #standToTheRight {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  color: rgba(0, 0, 0, 0.65);
+}
+main #whyUs #graphicDesign,
+main #whyUs #photography {
+  width: 100%;
+  height: 563px;
+  padding: 0 10em 4em;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  text-align: center;
+}
+main #whyUs #transformYourBrand .article,
+main #whyUs #standToTheRight .article {
+  width: 50%;
+  height: 563px;
+  padding: 0 7.8em 0;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+}
+#whyUs article h2 {
+  margin-bottom: 0.9em;
+
+  font-size: 36px;
+  font-weight: 700;
+}
+#whyUs article p {
+  line-height: 1.8em;
+}
+
+#whyUs article a {
+  position: relative;
+  width: max-content;
+  margin-top: 2em;
+  padding-left: 0.5em;
+
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#whyUs article a::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+
+  display: inline-block;
+
+  height: 35%;
+  width: calc(100% + 0.5em);
+
+  background: hsl(51, 100%, 49%);
+
+  border-radius: 1em;
+  z-index: -1;
+  filter: opacity(0.25);
+}
+#whyUs article a:hover > #whyUs article a::before {
+  filter: opacity(1);
+}
+
+main #whyUs #transformYourBrand:after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  height: 563px;
+
+  background: url("./../images/desktop/image-transform.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+main #whyUs #standToTheRight {
+  flex-direction: row-reverse;
+}
+main #whyUs #standToTheRight:after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  height: 563px;
+
+  background: url("./../images/desktop/image-stand-out.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+#whyUs #standToTheRight a::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+
+  display: inline-block;
+
+  height: 35%;
+  width: calc(100% + 0.5em);
+
+  background: hsl(7, 99%, 70%);
+
+  border-radius: 1em;
+  z-index: -1;
+  filter: opacity(0.25);
+}
+
+#whyUs #graphicDesign {
+  background: url("./../images/desktop/image-graphic-design.jpg") no-repeat;
+  background-position: contain;
+  background-position: center center;
+
+  color: hsl(167, 40%, 24%);
+}
+#whyUs #photography {
+  background: url("./../images/desktop/image-photography.jpg") no-repeat;
+  background-position: contain;
+  background-position: center center;
+}
+#whyUs #graphicDesign h2,
+#whyUs #photography h2 {
+  font-size: 25px;
+}
+#clientTestimonials header {
+  background: transparent;
+  margin-top: 10.5em;
+  margin-bottom: 5em;
+  grid-area: header;
+}
+#clientTestimonials header h2 {
+  font-size: 1.2em;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#clientTestimonials #emilyR {
+  grid-area: emilyR;
+}
+#clientTestimonials #thomasS {
+  grid-area: thomasS;
+}
+#clientTestimonials #jennieF {
+  grid-area: jennieF;
+}
+
+#clientTestimonials {
+  margin: 0 auto;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: 27.5% 27.5% 27.5%;
+  grid-template-rows: max-content;
+  grid-template-areas:
+    "header header header"
+    "emilyR thomasS jennieF";
+  justify-content: center;
+}
+#clientTestimonials article .profilePicture {
+  width: 70px;
+  margin: 0 auto 4em;
+  border-radius: 5em;
+
+  grid-area: profilePicture;
+}
+#clientTestimonials article .userName {
+  margin-top: 4.5em;
+  margin-bottom: 1em;
+  grid-area: userName;
+}
+#clientTestimonials article .workTittle {
+  grid-area: workTittle;
+
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+#clientTestimonials article .commentary {
+  grid-area: commentary;
+
+  line-height: 1.8em;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+#clientTestimonials article {
+  width: 350px;
+  height: max-content;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: max-content;
+  grid-template-areas:
+    "profilePicture"
+    "commentary"
+    "userName"
+    "workTittle";
+  text-align: center;
+}
+#imgBlock figure {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#imgBlock figure img {
+  width: 25%;
+}
+.bigFooter {
+  width: 100%;
+  background: #90d4c5;
+  display: flex;
+  align-items: center;
+  flex-direction: center;
+  flex-direction: column;
+}
+.bigFooter .logo {
+  margin: 5em 0 3em;
+}
+.bigFooter .menuBar {
+  width: 25%;
+  margin-bottom: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.bigFooter .menuBar a {
+  color: hsl(168, 34%, 41%);
+  font-weight: 400;
+  font-family: "sans-serif";
+}
+.bigFooter #contact {
+  width: 50%;
+
+  margin: 0 auto 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bigFooter #contact nav {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.attribution {
+  width: 100%;
+  padding-bottom: 1em;
+  background: #90d4c5;
+
+  text-align: center;
+  color: hsl(168, 34%, 41%);
+}
+.attribution a {
+  text-decoration: none;
+  font-weight: 700;
+  font-family: "sans-serif";
+  color: hsl(0, 0%, 100%);
+}
